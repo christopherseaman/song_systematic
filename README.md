@@ -29,29 +29,58 @@ This project aims to develop an LLM-powered assistant system for conducting syst
 A systematic review follows a structured methodology to comprehensively analyze all available research on a specific topic. Below is the detailed process we will address:
 
 ```mermaid
-flowchart TD
-    A[Protocol Development] --> B[Literature Search]
-    B --> C[Abstract Screening]
-    C --> D[Full-Text Review]
-    D --> E[Data Extraction]
-    E --> F[Quality Assessment]
-    F --> G[Data Synthesis]
-    G --> H[Meta-Analysis]
-    H --> I[Report Generation]
-    
-    style A fill:#d0f0c0
-    style B fill:#d0f0c0
-    style C fill:#d0f0c0
-    style D fill:#d0e0ff
-    style E fill:#d0e0ff
-    style F fill:#d0e0ff
-    style G fill:#ffe0d0
-    style H fill:#ffe0d0
-    style I fill:#ffe0d0
-    
-    classDef phase1 fill:#d0f0c0
-    classDef phase2 fill:#d0e0ff
-    classDef phase3 fill:#ffe0d0
+flowchart LR
+    %%{init: {'theme': 'neutral', 'themeVariables': { 'background': '#ffffff', 'fontColor': '#000000', 'lineColor': '#000000' }}}%%
+    subgraph Phase1[Planning Phase]
+        direction TB
+        A[Protocol Development]
+        B[Literature Search]
+        C[Abstract Screening]
+    end
+
+    subgraph Phase2[Analysis Phase]
+        direction TB
+        D[Full-Text Review]
+        E[Data Extraction]
+        F[Quality Assessment]
+    end
+
+    subgraph Phase3[Synthesis Phase]
+        direction TB
+        G[Data Synthesis]
+        H[Meta-Analysis]
+        I[Report Generation]
+    end
+
+    Phase1 --> Phase2
+    Phase2 --> Phase3
+
+    style Phase1 fill:#d0f0c0
+    style Phase2 fill:#d0e0ff
+    style Phase3 fill:#ffe0d0
+
+    style A fill:#b8e4b8
+    style B fill:#b8e4b8
+    style C fill:#b8e4b8
+    style D fill:#b8d4ff
+    style E fill:#b8d4ff
+    style F fill:#b8d4ff
+    style G fill:#ffd4b8
+    style H fill:#ffd4b8
+    style I fill:#ffd4b8
+
+    A --> B
+    B --> C
+    D --> E
+    E --> F
+    G --> H
+    H --> I
+
+    classDef subgraphLabel fill:none,stroke:none,color:black
+    class Phase1,Phase2,Phase3 subgraphLabel
+
+    classDef arrow fill:none,stroke:#000000,color:#000000,stroke-width:2
+    class Phase1,Phase2,Phase3,A,B,C,D,E,F,G,H,I arrow
 ```
 
 ### 1. Protocol Development
