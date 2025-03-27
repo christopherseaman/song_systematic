@@ -30,7 +30,6 @@ A systematic review follows a structured methodology to comprehensively analyze 
 
 ```mermaid
 flowchart LR
-    %%{init: {'theme': 'neutral', 'themeVariables': { 'background': '#ffffff', 'fontColor': '#000000', 'lineColor': '#000000' }}}%%
     subgraph Phase1[Planning Phase]
         direction TB
         A[Protocol Development]
